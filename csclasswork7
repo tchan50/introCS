@@ -1,0 +1,14 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname csclasswork7) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+(define quadSolve
+  (lambda (a b c)
+    (cond
+      ((< (- (expt b 2) (* 4 a c)) 0) (display "no real roots"))
+       (else (/ (+ (* b -1) (sqrt (- (expt b 2) (* 4 a c)))) (* 2 a)))
+       )
+    )
+  )
+(quadSolve 1 1 4)
+
+           

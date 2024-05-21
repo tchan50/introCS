@@ -1,0 +1,24 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname cshomework10) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+(define (TimesTable x y)
+  (if (= y 12)
+      (begin
+        (display x)
+        (display "*")
+        (display y)
+        (display "=")
+        (display (* x y)))
+      (begin
+        (display x)
+        (display "*")
+        (display y)
+        (display "=")
+        (display (* x y))
+        (newline)
+        (TimesTable x (+ y 1))
+        )
+      )
+  )
+(TimesTable 8 5)
+                 
